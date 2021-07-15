@@ -1,0 +1,17 @@
+.ContentPlan {
+  flex-grow: 1;
+
+  &__seteps {
+    background-color: #F7F8FC;
+    margin-top: 4px;
+  }
+  &__greetings {
+    font-size: 40px;
+    color:$color-gray-title;
+    
+    &--name {
+      color:$color-red-title;
+
+    }
+  }
+}
