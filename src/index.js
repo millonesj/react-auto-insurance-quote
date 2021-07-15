@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
+import './assets/scss/App.scss';
+import '@fontsource/lato';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
