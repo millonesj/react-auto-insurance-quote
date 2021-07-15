@@ -1,12 +1,14 @@
 
-// @import '../../../scss/index.scss';
-
 .LoginBanner {
   background-image: url('./images/background-login.svg') ;
   min-height: 100vh;
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
+
+  .__image {
+    margin-top: 100px;
+  }
 
   &__text-container {
     display: flex;
