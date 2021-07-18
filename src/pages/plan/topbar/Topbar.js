@@ -6,7 +6,11 @@ import Box from '@material-ui/core/Box';
 
 const Topbar = () => {
   return (
-    <AppBar position="static" className="Topbar">
+    <AppBar
+      position="static"
+      className="Topbar"
+      style={{ background: 'transparent', boxShadow: 'none' }}
+    >
       <Toolbar className="Topbar">
         <Box display="flex" flexGrow={1}>
           <img src={Logo} alt="logo" flexGrow={1} />

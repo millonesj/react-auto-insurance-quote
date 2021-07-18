@@ -1,6 +1,7 @@
 
 .Topbar {
-  background-color: white;
+  background: transparent;
+  border-bottom: 1px solid #E4E8F7;
 
   &__right-header {
     display: flex;
