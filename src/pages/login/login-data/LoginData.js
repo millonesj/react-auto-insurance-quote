@@ -3,7 +3,6 @@ import { TextField, Button, Grid } from '@material-ui/core';
 import Controls from '../../../components/controls/Controls';
 import { useHistory } from 'react-router-dom';
 
-// import FormGroup from '@material-ui/core/FormGroup';
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 
@@ -21,44 +20,46 @@ const LoginData = (_, context) => {
   const handleQuote = () => {
     history.push('plan');
   };
+  const URL_POLITICS =
+    'https://www.rimac.com.pe/uploads/Ley29733_proteccion_de_datos_personales.pdf';
 
   return (
     <form noValidate autoComplete="off" className="LoginData">
-      <Grid container spacing={2}>
-        <Grid item xs={12}>
-          Déjanos tus datos {phone}
-        </Grid>
-
-        <Grid item xs={12} p={2}>
+      <div className="LoginData__container">
+        <div className="LoginData__title">Déjanos tus datos</div>
+        <div>
           <Controls.Input
             error={errorPhone}
             id="outlined-error"
             label="Celular"
             variant="outlined"
-            p={2}
             onChange={(e) => validatePhone(e.target.value)}
           />
-        </Grid>
-
-        <Grid item xs={12} m={2}>
+        </div>
+        <div>
           <TextField
             error
             id="outlined-error"
             label="Placa"
             variant="outlined"
           />
-        </Grid>
-        <Grid item xs={12} m={2}>
+        </div>
+        <div>
           <FormControlLabel
             control={<Checkbox name="checkedG" />}
-            label="Custom color"
+            label={
+              <div>
+                Acepto la{' '}
+                <a href={URL_POLITICS} target="_blank" rel="noreferrer">
+                  Política de Protecciòn de Datos Personales
+                </a>{' '}
+                y los
+                <span>Términos y Condiciones.</span>
+              </div>
+            }
           />
-          <div>
-            Acepto la Política de Protecciòn de Datos Personales y los Términos
-            y Condiciones.
-          </div>
-        </Grid>
-        <Grid item xs={6}>
+        </div>
+        <div>
           <Button
             variant="contained"
             color="primary"
@@ -66,8 +67,8 @@ const LoginData = (_, context) => {
           >
             COTÍZALO
           </Button>
-        </Grid>
-      </Grid>
+        </div>
+      </div>
     </form>
   );
 };

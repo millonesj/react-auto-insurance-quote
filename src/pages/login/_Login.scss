@@ -3,4 +3,17 @@
 
 .Login {
   flex-grow: 1;
+  &__banner-container {
+    height: 100vh;
+    @include for-phone-only {    
+      height: 40vh;
+    }
+  }
+
+  &__data-container {
+    // height: 100vh;
+    @include for-phone-only {    
+      height: 60vh;
+    }
+  }
 }

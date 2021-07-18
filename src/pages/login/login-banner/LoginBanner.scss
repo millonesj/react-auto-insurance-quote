@@ -1,24 +1,36 @@
 
 .LoginBanner {
   background-image: url('./images/background-login.svg') ;
-  min-height: 100vh;
-  height: 100vh;
+  height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
 
-  .__image {
-    margin-top: 100px;
+  &__image {
+    content: url('./images/user.svg');
+    background-repeat: no-repeat;
+    text-align:center;
+    @include for-phone-only {    
+      content: url('./images/user-mobile.svg');
+      text-align:right;
+    }
+
   }
 
   &__text-container {
     display: flex;
     flex-direction: column;
+    width: 280px;
+    @include for-phone-only {    
+      text-align:left;
+      width: 200px;
+
+    }
   }
 
   .title {
     font-size: 36px;
     line-height: 48px;
-    letter-spacing: -0.2px;
+    // letter-spacing: -0.2px;
     color: $color-gray-title;
 
     &--red {

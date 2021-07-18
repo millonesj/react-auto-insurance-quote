@@ -1,4 +1,29 @@
 .LoginData {
   flex-grow: 1;
-  width: 288px;
+  display: flex;
+  justify-content: center;
+
+  &__title {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+
+    /* identical to box height, or 133% */
+    letter-spacing: -0.2px;
+
+    color: $color-gray-title;
+  }
+
+  &__container {
+    width: 280px;
+
+    div {
+      margin-top: 2px;
+      margin-bottom: 2px;
+    }
+  }
+
+
 }
