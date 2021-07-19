@@ -15,16 +15,14 @@ const IconButtonBack = () => {
   const classes = useStyles();
 
   return (
-    <div>
-      <IconButton
-        className={(classes.root, classes.button)}
-        aria-label="delete"
-        size="small"
-        color="primary"
-      >
-        <ArrowBackIosOutlinedIcon fontSize="inherit" />
-      </IconButton>
-    </div>
+    <IconButton
+      className={(classes.root, classes.button)}
+      aria-label="delete"
+      size="small"
+      color="primary"
+    >
+      <ArrowBackIosOutlinedIcon fontSize="inherit" />
+    </IconButton>
   );
 };
 
