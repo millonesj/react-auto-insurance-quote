@@ -11,7 +11,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const IconButtonBack = () => {
+const IconButtonBack = (props) => {
+  const { onClick } = props;
   const classes = useStyles();
 
   return (
@@ -20,6 +21,7 @@ const IconButtonBack = () => {
       aria-label="delete"
       size="small"
       color="primary"
+      onClick={onClick}
     >
       <ArrowBackIosOutlinedIcon fontSize="inherit" />
     </IconButton>
